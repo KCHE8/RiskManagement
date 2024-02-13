@@ -1,1 +1,30 @@
-{}
+{
+  "requires": {
+    "[development]": {
+      "auth": {
+        "kind": "basic",
+        "users": {
+          "kche@camelot-itlab.com": {
+            "ID": "kfc",
+            "password": "kkffcc",
+            "roles": [
+              "RiskViewer",
+              "RiskManager"
+            ],
+            "attr": {
+              "attr1_key": "attr1_value",
+              "attr2_key": "attr2_value"
+            },
+            "userAttributes": {
+              "email": "kche@camelot-itlab.com"
+            },
+            "random_KFC_Attr_Deluxe": {
+              "supa_dupa1": "whatever",
+              "mega_mega2": "lol1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

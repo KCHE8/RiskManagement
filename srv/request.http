@@ -1,0 +1,57 @@
+### GET 
+GET http://localhost:4004/odata/v4/service/risk
+Authorization: Basic a2NoZUBjYW1lbG90LWl0bGFiLmNvbTpra2ZmY2M=
+#Authorization: Basic a2YuY0BiZWNhdXNlaWNhbi5vd25kb21haW4uY29tOmtrZmZjYw==
+#Authorization: Basic UzAwMjU5NjY4NjU6a2ZDYXAhODk=
+#Authorization: Basic a2ZjOmtrZmZjYw==
+#Authorization: Basic XxXrandomXxX
+
+### GET 
+GET http://localhost:4004/odata/v4/service/risk/Risks
+#Authorization: Basic a2ZjOmtrZmZjYw==
+Authorization: Basic a2NoZUBjYW1lbG90LWl0bGFiLmNvbTpra2ZmY2M=
+
+### GET 
+GET http://localhost:4004/odata/v4/service/risk/BusinessPartners
+Authorization: Basic a2ZjOmtrZmZjYw==
+
+### GET 
+GET http://localhost:4004/odata/v4/service/risk/Mitigations
+Authorization: Basic a2ZjOmtrZmZjYw==
+
+### GET 
+GET http://localhost:4004/odata/v4/service/risk/Risks?&expand=miti
+Authorization: Basic a2ZjOmtrZmZjYw==
+
+### GET 
+GET http://localhost:4004/odata/v4/service/risk/Risks?$filter=ID%20eq%2039a030e3-b6ff-4b09-a0e6-25c8add03f02
+Authorization: Basic a2ZjOmtrZmZjYw==
+
+### GET 
+GET http://localhost:4004/odata/v4/service/risk/Risks?&expand=bp
+Authorization: Basic a2ZjOmtrZmZjYw==
+
+
+
+### GET 
+GET https://port4004-workspaces-ws-5blg7.us10.trial.applicationstudio.cloud.sap/odata/v4/service/risk/Risks?$expand=miti
+Authorization: Basic a2ZjOmtrZmZjYw==
+#Authorization: Basic UzAwMjU5NjY4NjU6a2ZDYXAhODk=
+#Authorization: Basic a2NoZUBjYW1lbG90LWl0bGFiLmNvbTo5NTFiOGM4ZDBhMzIxNzg5ZmY1YmFlYjA2NmNmOWM2NiFBQUE=
+
+### POST
+GET http://localhost:4004/odata/v4//service/risk/$batch
+{
+--batch_id-1707302689457-104
+Content-Type:application/http
+Content-Transfer-Encoding:binary
+
+GET Risks?$count=true&$filter=(IsActiveEntity%20eq%20false%20or%20SiblingEntity/IsActiveEntity%20eq%20null)&$select=HasActiveEntity,ID,IsActiveEntity,PrioCriticality,criticality,impact,owner,prio_code,title&$expand=bp($select=BusinessPartner,FullName),miti($select=ID,IsActiveEntity,descr),prio($select=code,descr)&$skip=0&$top=30 HTTP/1.1
+Accept:application/json;odata.metadata=minimal;IEEE754Compatible=true
+Accept-Language:en
+Content-Type:application/json;charset=UTF-8;IEEE754Compatible=true
+
+
+--batch_id-1707302689457-104--
+Group ID: $auto.Workers
+}
