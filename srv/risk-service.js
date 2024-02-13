@@ -82,7 +82,7 @@ module.exports = cds.service.impl(async function() {
 
         console.log("I was here!");
         process.stdout.write("I was here!");
-        console.error("I was here!");
+        //console.error("I was here!");
         //debugger;
         //error.write("I was here!");
         return next();
