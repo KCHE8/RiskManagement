@@ -70,7 +70,7 @@ module.exports = cds.service.impl(async function() {
          if there is such an expand, remove it
        */
         if (!req.query.SELECT.columns) return next();
-
+        // Random Commentaro 0
         const expandIndex = req.query.SELECT.columns.findIndex(
             ({ expand, ref }) => expand && ref[0] === "bp"
         );
