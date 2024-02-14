@@ -85,7 +85,7 @@ module.exports = cds.service.impl(async function() {
         //console.error("I was here!");
         //debugger;
         //error.write("I was here!");
-        // Random Comment
+        // Random Commentaro
         return next();
 
         // Make sure bp_BusinessPartner (ID) will be returned
