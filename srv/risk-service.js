@@ -79,15 +79,15 @@ module.exports = cds.service.impl(async function() {
 
         // Remove expand from query
         req.query.SELECT.columns.splice(expandIndex, 1);
-
+        
         console.log("I was here!");
         process.stdout.write("I was here!");
         //console.error("I was here!");
         //debugger;
         //error.write("I was here!");
-        // Random Commentaro
+        // Random Commentaro 1
         return next();
-
+        // Random Commentaro 2
         // Make sure bp_BusinessPartner (ID) will be returned
         if (!req.query.SELECT.columns.find((column) =>
             column.ref.find((ref) => ref == "bp_BusinessPartner")
