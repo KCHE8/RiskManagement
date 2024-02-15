@@ -70,7 +70,7 @@ module.exports = cds.service.impl(async function() {
          if there is such an expand, remove it
        */
         if (!req.query.SELECT.columns) return next();
-        // Random Commentaro 0
+        // Random Commentaro 00
         const expandIndex = req.query.SELECT.columns.findIndex(
             ({ expand, ref }) => expand && ref[0] === "bp"
         );
@@ -85,9 +85,9 @@ module.exports = cds.service.impl(async function() {
         //console.error("I was here!");
         //debugger;
         //error.write("I was here!");
-        // Random Commentaro 1
+        // Random Commentaro 11
         return next();
-        // Random Commentaro 2
+        // Random Commentaro 22
         // Make sure bp_BusinessPartner (ID) will be returned
         if (!req.query.SELECT.columns.find((column) =>
             column.ref.find((ref) => ref == "bp_BusinessPartner")
